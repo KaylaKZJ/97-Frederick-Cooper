@@ -1,5 +1,6 @@
 export interface ITenant {
     name: string
+    tagline: string
     contactPerson: string
     phone: string
     services: string[]

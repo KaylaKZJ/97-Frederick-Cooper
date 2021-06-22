@@ -1,0 +1,10 @@
+@import "../variables.scss";
+
+.home {
+    .tenants {
+        .grid {
+            display: grid;
+            gap: 3rem;
+        }
+    }
+}

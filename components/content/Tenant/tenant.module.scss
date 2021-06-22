@@ -1,3 +1,44 @@
 @import "../../../styles/variables.scss";
 
-.tenant {}
+.tenant {
+    border: 3px solid $green;
+
+    .details {
+        display: grid;
+        grid-template-columns: 0.8fr 0.3fr;
+        height: 12.5rem;
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            overflow: hidden;
+
+            >div {
+                padding: 1rem;
+                height: unset;
+            }
+        }
+
+        .text {
+            background-color: $green;
+            color: $white;
+            padding: 1rem;
+
+            h2 {
+                margin: 0 0 0.25rem 0;
+            }
+
+            h3 {
+                margin: 0;
+                font-weight: 500;
+                color: $grey;
+            }
+
+            p {
+                font-weight: 600;
+            }
+        }
+    }
+}
