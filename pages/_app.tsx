@@ -5,7 +5,7 @@ import Layout from "../components/UI/Layout/Layout"
 
 // Styles & Icons
 import '../styles/global.scss';
-// import "../assets/icons/style.css";
+import "../assets/icons/style.css";
 import "typeface-roboto";
 
 
