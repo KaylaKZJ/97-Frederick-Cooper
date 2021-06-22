@@ -1,0 +1,73 @@
+$green: #9da739;
+$grey: #282828;
+$white: #ffffff;
+$font: Helvetica,
+Roboto,
+Tahoma,
+Geneva,
+sans-serif;
+
+// Mixins
+
+@mixin reset-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin reset-hr {
+    border: none;
+    display: block;
+    margin: 0;
+}
+
+@mixin reset-button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: $font;
+    background-color: transparent;
+
+    :focus {
+        outline: none;
+    }
+
+    :active {
+        outline: none;
+    }
+}
+
+@mixin reset-input {
+    font-family: $font;
+    border: none;
+    outline: none;
+    resize: none;
+
+    // Remove Autofill Colours
+    &:-webkit-autofill {
+
+        &,
+        &:hover,
+        &:focus {
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    }
+
+    :focus {
+        outline: none;
+    }
+
+    :active {
+        outline: none;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &[type=number] {
+        -moz-appearance: textfield;
+    }
+}
