@@ -42,19 +42,27 @@ const Tenant = (tenant: ITenant) => {
                             </div>
                             <div className={styles.links}>
                                 {tenant.websiteURL &&
-                                    <a href={tenant.websiteURL} target="blank">
+                                    <a href={tenant.websiteURL}
+                                        data-tip="Visit Website"
+                                        target="blank">
                                         <i className="icon-website" />
                                     </a>}
                                 {tenant.facebookURL &&
-                                    <a href={tenant.facebookURL} target="blank">
+                                    <a href={tenant.facebookURL}
+                                        data-tip="Visit Facebook Page"
+                                        target="blank">
                                         <i className="icon-facebook" />
                                     </a>}
                                 {tenant.instagramURL &&
-                                    <a href={tenant.instagramURL} target="blank">
+                                    <a href={tenant.instagramURL}
+                                        data-tip="Visit Instagram Account"
+                                        target="blank">
                                         <i className="icon-instagram" />
                                     </a>}
                                 {tenant.twitterURL &&
-                                    <a href={tenant.twitterURL} target="blank">
+                                    <a href={tenant.twitterURL}
+                                        data-tip="Visit Twitter Profile"
+                                        target="blank">
                                         <i className="icon-twitter" />
                                     </a>}
                             </div>

@@ -1,5 +1,3 @@
-import ClassNames from "classnames";
-
 import Head from "../../Head/Head";
 
 interface IProps {

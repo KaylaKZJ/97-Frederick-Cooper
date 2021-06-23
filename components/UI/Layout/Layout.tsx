@@ -1,4 +1,4 @@
-import PropsTypes from 'prop-types';
+import ReactTooltip from "react-tooltip";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <>
             <Header />
             {children}
-            <Footer />
+            <ReactTooltip />
         </>
     )
 }
