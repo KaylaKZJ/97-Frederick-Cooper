@@ -63,6 +63,12 @@
                 p {
                     margin: 0;
                     text-transform: capitalize;
+
+                    span {
+                        color: $green;
+                        font-weight: 700;
+                        font-size: 1.1rem;
+                    }
                 }
 
                 &.contact {
@@ -99,5 +105,41 @@
                 }
             }
         }
+    }
+
+    @media screen and (max-width:768px) {
+        grid-template-columns: 1fr;
+
+        .content {
+            border: none;
+            text-align: center;
+
+            .info {
+                .row {
+                    &.contact {
+                        flex-direction: column;
+                        align-items: center;
+
+                        .links {
+                            margin-top: 1.25rem;
+
+                            a {
+                                margin: 0 0.75rem;
+
+                                i {
+                                    font-size: 1.3rem;
+                                }
+
+                            }
+                        }
+                    }
+
+
+                }
+
+            }
+        }
+
+
     }
 }

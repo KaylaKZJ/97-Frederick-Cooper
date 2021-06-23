@@ -8,6 +8,8 @@ import NextImage from "../../UI/Library/NextImage/NextImage";
 import styles from "./tenant.module.scss";
 
 const Tenant = (tenant: ITenant) => {
+
+
     return (
         <Fade >
             <article className={styles.tenant}>
@@ -30,7 +32,7 @@ const Tenant = (tenant: ITenant) => {
                     <div className={styles.info}>
                         <div className={styles.row}>
                             <h3>Services:</h3>
-                            <p>{tenant.services.join(" | ")}</p>
+                            <p dangerouslySetInnerHTML={{ __html: tenant.services.join(" <span>|</span> ") }}></p>
                         </div>
                         <div className={`${styles.row} ${styles.contact}`}>
                             <div className={styles.phone}>

@@ -7,4 +7,55 @@
             gap: 3rem;
         }
     }
+
+    .contact {
+        .grid {
+            display: grid;
+            grid-template-columns: 0.6fr 0.4fr;
+            gap: 3rem;
+
+            iframe {
+                width: 100%;
+                border: none;
+                min-height: 20rem;
+            }
+
+            .details {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                a {
+                    font-size: 1.1rem;
+                    margin: 0.5rem 0;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        color: $green;
+                        margin-right: 0.5rem;
+                    }
+
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @media screen and (max-width:991px) {
+        .contact {
+            .grid {
+                grid-template-columns: 1fr;
+
+                .details {
+                    grid-row: 1/2;
+
+                    a {}
+                }
+            }
+        }
+    }
 }

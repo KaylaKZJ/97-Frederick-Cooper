@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next';
 import { gql } from "@apollo/client";
 import { client } from "../utils/apollo-client";
 import { ITenant } from "../utils/types";
+import { sortByName } from '../utils/utils';
 
 // Components
 import Page from "../components/UI/Library/Page/Page"
@@ -12,6 +13,7 @@ import Tenant from "../components/content/Tenant/Tenant"
 import styles from "../styles/pages/home.module.scss"
 
 const Home = ({ tenants }: { tenants: ITenant[] }) => {
+  const tenantsSorted = sortByName(tenants)
 
   return (
     <Page
@@ -27,9 +29,31 @@ const Home = ({ tenants }: { tenants: ITenant[] }) => {
         heading={<h1>Our <span>Tenants</span>.</h1>}
       >
         <div className={styles.grid}>
-          {tenants.map((tenant, index) => (
+          {tenantsSorted.map((tenant, index) => (
             <Tenant {...tenant} key={index} />
           ))}
+        </div>
+      </Section>
+
+      <Section className={styles.contact}
+        id="contact"
+        heading={<h1><span>Contact</span> Us.</h1>}
+      >
+        <div className={styles.grid}>
+          <iframe src="https://snazzymaps.com/embed/321756"></iframe>
+          <div className={styles.details}>
+            <a href="https://wa.me/+27672257945?text=Hi%20@97!">
+              <i className="icon-whatsapp"></i>
+              067 225 7945
+            </a>
+            <a href="mailto:97frederickcooperdrive@gmail.com">
+              <i className="icon-mail"></i>
+              97frederickcooperdrive@gmail.com
+            </a>
+            <a href="https://goo.gl/maps/Vnyk2rzdvi6gQvaJA" target="blank">
+              <i className="icon-pin"></i>
+              97 Fredrick Cooper Dr, Kenmare, Krugersdorp, 1745</a>
+          </div>
         </div>
       </Section>
     </Page>
