@@ -1,14 +1,15 @@
 import ReactTooltip from "react-tooltip";
 
 import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+
+import styles from "./layout.module.scss";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
             <Header />
             {children}
-            <ReactTooltip />
+            <ReactTooltip className={styles.tip} />
         </>
     )
 }
