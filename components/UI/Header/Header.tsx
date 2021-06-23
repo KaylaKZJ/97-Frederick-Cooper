@@ -1,3 +1,5 @@
+import { useRef } from "react"
+
 // Components
 import Container from "../Library/Container/Container";
 
@@ -5,6 +7,26 @@ import Container from "../Library/Container/Container";
 import styles from "./header.module.scss"
 
 const Header = () => {
+    const mobileNavRef = useRef() as React.MutableRefObject<HTMLDivElement>;
+
+    const openNav = () => {
+        mobileNavRef.current.classList.add(styles.open)
+    }
+
+    const closeNav = () => {
+        mobileNavRef.current.classList.remove(styles.open)
+    }
+
+
+
+    const Menu = () => {
+        return (
+            <div className={styles.menu}>
+                <a href="/#tenants" onClick={closeNav}>Our Tenants</a>
+                <a href="/#contact" onClick={closeNav}>Contact Us</a>
+            </div>
+        )
+    }
     return (
         <header className={styles.header}>
             <Container>
@@ -12,9 +34,11 @@ const Header = () => {
                     <div className={styles.logo}>
                         <img src="/images/branding/Logo.svg" alt="@97 Frederick Cooper Logo" />
                     </div>
-                    <div className={styles.menu}>
-                        <a href="/#tenants">Our Tenants</a>
-                        <a href="/#contact">Contact Us</a>
+                    <Menu />
+                    <i className="icon-menu" onClick={openNav} />
+                    <div className={styles.mobileNav} ref={mobileNavRef}>
+                        <i className="icon-clear" onClick={closeNav}></i>
+                        <Menu />
                     </div>
                 </nav>
             </Container>
