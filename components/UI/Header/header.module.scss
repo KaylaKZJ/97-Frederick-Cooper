@@ -1,7 +1,30 @@
 @import "../../../styles/variables.scss";
 
 .header {
-    background-color: $white;
     position: relative;
+    padding: 1rem 0;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            img {
+                width: 10rem;
+            }
+        }
+
+        .menu {
+            a {
+                margin-left: 1rem;
+                font-weight: 500;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+        }
+    }
 
 }

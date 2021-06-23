@@ -5,19 +5,23 @@ html {
 }
 
 body {
-  background-color: $white;
+  background-color: $grey;
   font-family: $font;
   font-size: 1rem;
   padding: 0;
   margin: 0;
   width: 100%;
   box-sizing: border-box;
-  color: $grey;
+  color: $white;
   transition: 0.3s ease-out;
   scroll-behavior: smooth;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  background-image: url("/images/background.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
 }
 
 * {
@@ -44,11 +48,11 @@ p {
   width: 6px;
 
   &-track {
-    background: $white;
+    background: $grey;
   }
 
   &-thumb {
-    background: $grey;
+    background: $white;
     transition: 0.4s ease-in-out;
 
     &:hover {

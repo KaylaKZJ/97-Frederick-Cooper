@@ -4,9 +4,8 @@
     padding: 8rem 0;
 
     .heading {
-        text-align: center;
         display: flex;
-        flex-direction: column-reverse;
+        justify-content: center;
         padding: 0 10rem;
         margin-bottom: 4rem;
         background-image: url("/images/other/heading.png");
@@ -14,17 +13,18 @@
         background-repeat: no-repeat;
         background-position: center center;
 
-        h2 {
+        h1 {
             font-weight: 600;
             margin: 0.5rem 0 0 0;
-            font-size: 1.75rem;
-        }
+            font-size: 1.85rem;
+            border-bottom: 2px solid $white;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            letter-spacing: 1px;
 
-        h3 {
-            font-weight: 600;
-            font-size: 1rem;
-            color: $green;
-            margin: 0;
+            span {
+                color: $green;
+            }
         }
     }
 

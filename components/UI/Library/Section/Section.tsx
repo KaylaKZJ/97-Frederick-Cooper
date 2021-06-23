@@ -9,17 +9,22 @@ import styles from "./section.module.scss";
 interface IProps {
     children: React.ReactNode;
     className?: string;
+    heading: React.ReactNode;
+    id?: string;
 }
 
-const Section = ({ children, className }: IProps) => {
+const Section = ({ children, className, heading, id }: IProps) => {
     const classes = ClassNames(
         className,
         styles.section,
     )
 
     return (
-        <section className={classes} >
+        <section className={classes} id={id} >
             <Container>
+                <div className={styles.heading}>
+                    {heading}
+                </div>
                 {children}
             </Container>
         </section >

@@ -2,42 +2,101 @@
 
 .tenant {
     border: 3px solid $green;
+    background-color: $white;
+    display: grid;
+    grid-template-columns: 0.3fr 0.8fr;
+    min-height: 12.5rem;
 
-    .details {
-        display: grid;
-        grid-template-columns: 0.8fr 0.3fr;
-        height: 12.5rem;
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        overflow: hidden;
 
-        .logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        >div {
             padding: 1rem;
-            overflow: hidden;
-
-            >div {
-                padding: 1rem;
-                height: unset;
-            }
+            height: unset;
         }
+    }
 
-        .text {
+    .content {
+        border-left: 3px solid $green;
+
+
+        .heading {
             background-color: $green;
             color: $white;
-            padding: 1rem;
+            padding: 1.5rem;
 
             h2 {
                 margin: 0 0 0.25rem 0;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                font-size: 1.5rem;
             }
 
             h3 {
                 margin: 0;
                 font-weight: 500;
                 color: $grey;
+                font-size: 1.15rem;
+                font-style: italic;
             }
+        }
 
-            p {
-                font-weight: 600;
+        .info {
+            padding: 1.5rem;
+            color: $grey;
+            background-color: $white;
+
+            .row {
+                margin-bottom: 1rem;
+
+                h3 {
+                    display: inline-block;
+                    border-bottom: 2px solid $green;
+                    padding-bottom: 0.1rem;
+                    margin: 0 0 0.75rem 0;
+                }
+
+                p {
+                    margin: 0;
+                    text-transform: capitalize;
+                }
+
+                &.contact {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    .phone {
+                        a {
+                            display: block;
+                        }
+
+                        p {
+                            color: $green;
+                            font-weight: 500;
+                            margin-top: 0.1rem;
+                        }
+                    }
+
+                    .links {
+                        a {
+                            margin: 0 0.5rem;
+                            color: $grey;
+
+                            i {
+                                font-size: 1.2rem;
+                            }
+
+                            &:hover {
+                                color: $green;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

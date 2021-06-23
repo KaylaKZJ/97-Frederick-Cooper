@@ -22,7 +22,10 @@ const Home = ({ tenants }: { tenants: ITenant[] }) => {
       }}
       className={styles.home}
     >
-      <Section className={styles.tenants}>
+      <Section className={styles.tenants}
+        id="tenants"
+        heading={<h1>Our <span>Tenants</span>.</h1>}
+      >
         <div className={styles.grid}>
           {tenants.map((tenant, index) => (
             <Tenant {...tenant} key={index} />
@@ -38,21 +41,21 @@ export default Home
 export const getStaticProps: GetStaticProps = async (context) => {
   const { data } = await await client.query({
     query: gql`
-        query {
-          allTenant {
-            name
+      query {
+        allTenant {
+        name
             tagline
-            contactPerson
-            phone
-            services
-            websiteURL
-            facebookURL
-            instagramURL
-            twitterURL
-            logo {
-              asset {
-                url
-              }
+      contactPerson
+      phone
+      services
+      websiteURL
+      facebookURL
+      instagramURL
+      twitterURL
+      logo {
+        asset {
+        url
+      }
             }
           }
           }
