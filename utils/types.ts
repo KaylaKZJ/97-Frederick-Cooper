@@ -13,5 +13,6 @@ export interface ITenant {
     facebookURL: string
     instagramURL: string
     twitterURL: string
+    bookingURL: string
 }
 

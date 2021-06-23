@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?uk7svq');
-  src:  url('fonts/icomoon.eot?uk7svq#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?uk7svq') format('truetype'),
-    url('fonts/icomoon.woff?uk7svq') format('woff'),
-    url('fonts/icomoon.svg?uk7svq#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?1tuvem');
+  src:  url('fonts/icomoon.eot?1tuvem#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?1tuvem') format('truetype'),
+    url('fonts/icomoon.woff?1tuvem') format('woff'),
+    url('fonts/icomoon.svg?1tuvem#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-booking:before {
+  content: "\e90a";
+}
 .icon-clear:before {
   content: "\e909";
 }

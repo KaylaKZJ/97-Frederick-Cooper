@@ -42,7 +42,7 @@ const Home = ({ tenants }: { tenants: ITenant[] }) => {
         <div className={styles.grid}>
           <iframe src="https://snazzymaps.com/embed/321756"></iframe>
           <div className={styles.details}>
-            <a href="https://wa.me/+27672257945?text=Hi%20@97!">
+            <a href="https://wa.me/+27672257945?text=Hi%20@97!%20">
               <i className="icon-whatsapp"></i>
               067 225 7945
             </a>
@@ -76,6 +76,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       facebookURL
       instagramURL
       twitterURL
+      bookingURL
       logo {
         asset {
         url

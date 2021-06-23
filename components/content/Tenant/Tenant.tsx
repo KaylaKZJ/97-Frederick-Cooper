@@ -45,6 +45,12 @@ const Tenant = (tenant: ITenant) => {
                                     target="blank">
                                     <i className="icon-website" />
                                 </a>}
+                            {tenant.bookingURL &&
+                                <a href={tenant.bookingURL}
+                                    data-tip="Book an Appointment"
+                                    target="blank">
+                                    <i className="icon-booking" />
+                                </a>}
                             {tenant.facebookURL &&
                                 <a href={tenant.facebookURL}
                                     data-tip="Visit Facebook Page"
