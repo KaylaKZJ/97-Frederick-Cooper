@@ -17,8 +17,6 @@ const Header = () => {
         mobileNavRef.current.classList.remove(styles.open)
     }
 
-
-
     const Menu = () => {
         return (
             <div className={styles.menu}>

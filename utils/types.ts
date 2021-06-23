@@ -14,3 +14,4 @@ export interface ITenant {
     instagramURL: string
     twitterURL: string
 }
+

@@ -1,5 +1,5 @@
 import { ITenant } from "../../../utils/types";
-import Fade from "react-reveal/Fade";
+const Fade = require("react-reveal/Fade");
 
 // Components
 import NextImage from "../../UI/Library/NextImage/NextImage";
