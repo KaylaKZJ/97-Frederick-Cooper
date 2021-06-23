@@ -52,8 +52,12 @@
 
                 .details {
                     grid-row: 1/2;
+                    align-items: center;
 
-                    a {}
+                    a {
+                        display: block;
+                        text-align: center;
+                    }
                 }
             }
         }
